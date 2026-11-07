@@ -5,10 +5,10 @@
      GREET: "PLAY LEVEL"
   # vars_files: ########## 33333333333
   # - vars.yaml
-  vars_prompt:
-  - name: GREET
-    prompt: enter the value
-    private: false
+  # vars_prompt:    ###### 444444444
+  # - name: GREET
+  #   prompt: enter the value
+  #   private: false
   tasks:
   - name: print the variables
     # vars:    ##### TASK LEVEL VARIABLES   #22222222222      
