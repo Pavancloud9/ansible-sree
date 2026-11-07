@@ -1,0 +1,10 @@
+- name: vars files
+  hosts: web
+  connection: local
+  vars_prompt:
+  - name: COURSE
+    prompt: please enter course name
+  tasks:
+  - name: refer vars files
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, duration is {{ DURATION }}, trainer is {{ TRAINER }}"
