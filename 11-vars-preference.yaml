@@ -16,6 +16,4 @@
     ansible.builtin.debug:
       msg: "Hello from {{ GREET }}"
 
-  - name: print the variables1
-    ansible.builtin.debug:
-      msg: "Hello from {{ GREET }}"
+ 
