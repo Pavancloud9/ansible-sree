@@ -3,16 +3,16 @@
   connection: local
   vars:     ########### PLAY LEVEL VARIABLES  #### GLOBAL VARIABLES
      GREET: "PLAY LEVEL"
-  vars_files:
-    - vars.yaml
+  # vars_files: ########## 33333333333
+  # - vars.yaml
   vars_prompt:
   - name: GREET
     prompt: enter the value
     private: false
   tasks:
   - name: print the variables
-    vars:    ##### TASK LEVEL VARIABLES
-      GREET: task
+    # vars:    ##### TASK LEVEL VARIABLES   #22222222222      
+    #   GREET: task
     ansible.builtin.debug:
       msg: "Hello from {{ GREET }}"
 
