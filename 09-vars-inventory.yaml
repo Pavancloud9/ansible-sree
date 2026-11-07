@@ -1,7 +1,7 @@
 - name: vars files
-  hosts: web
+  hosts: local
   connection: local
   tasks:
-  - name: refer vars files
+  - name: print the info
     ansible.builtin.debug:
       msg: "Course is {{ COURSE }}, duration is {{ DURATION }}, trainer is {{ TRAINER }}"
