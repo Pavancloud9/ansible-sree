@@ -4,4 +4,4 @@
   tasks:
   - name: handle undefinded variable
     ansible.builtin.debug:
-      msg: "Hello from {{ PERSON }}"
+      msg: "Hello from {{ PERSON | default(sita) }}"
