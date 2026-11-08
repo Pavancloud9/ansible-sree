@@ -5,3 +5,10 @@
   - name: handle undefinded variable
     ansible.builtin.debug:
       msg: "Hello from {{ PERSON | default('sita') }}"
+
+  - name: convert string to LIST
+    vars:
+      FRUITS: "apple,goa,orange"  ## STRING
+    ansible.builtin.debug:
+      msg: "Fruits are:: {{ FRUITS }}"
+
