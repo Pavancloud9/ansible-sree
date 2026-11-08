@@ -6,9 +6,17 @@
     ansible.builtin.debug:
       msg: "Hello from {{ PERSON | default('sita') }}"
 
+    ##### STRING TO LIST CONVERSION FILTER ##############
   - name: convert string to LIST
     vars:
       FRUITS: "apple,goa,orange"  ## STRING
     ansible.builtin.debug:
       msg: "Fruits are:: {{ FRUITS | split(',') }}"
 
+  - name: convert map to LIST
+    vars:
+      COURSE:
+        name: ansible
+        duration: 120hrs
+    ansible.builtin.debug:
+      msg: "Course details: {{ COURSE | dict2items }}"
